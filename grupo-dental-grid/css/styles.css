@@ -1,0 +1,325 @@
+*{
+	font-family: 'Encode Sans', Ubuntu;
+}
+
+.grid-container{
+	display: grid;
+	width: 100vw;
+	height: 100vw;
+	grid-template-columns: repeat(4,1fr) 2fr 1fr;
+	grid-template-rows: 1.5fr 1fr 4fr 1fr 2fr 1fr 3fr 1fr;
+	gap: 1rem;
+	background-color: white;
+}
+.header{
+	grid-column: 1/7;
+	grid-row: 1/2;
+	background: white;
+}
+.header img {
+	height: 7rem;
+}
+.nav{
+	display: inline-grid;
+	grid-column: 1/7;
+	grid-row: 2/3;
+	justify-content: space-evenly;
+	text-align: center;
+	background-color: #9fd5d1;
+	color: white;
+	height: 3.6rem;
+	border-radius: 0.5rem;
+}
+.nav a{
+	color: white;
+	text-decoration: none;
+}
+.nav a:hover{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+.nav a:active{
+	color: white;
+}
+.nav a:visited{
+	color: white;
+}
+.nav1{
+	grid-column: 1/2;
+	grid-row: 2/3;
+	padding: 1vw 2vw;
+}
+.nav2{
+	grid-column: 2/3;
+	grid-row: 2/3;
+	padding: 1vw;
+}
+.nav3{
+	grid-column: 3/4;
+	grid-row: 2/3;
+	padding: 1vw;
+}
+.nav4{
+	grid-column: 4/5;
+	grid-row: 2/3;
+	padding: 1vw;
+}
+.nav5{
+	grid-column: 6/7;
+	grid-row: 2/3;
+	justify-content: space-evenly; /* no funciona */
+	align-content: center; /* no funciona */
+	vertical-align: middle; /* no funciona */
+}
+.social {
+	display: inline-grid;
+	justify-content: end; /* no hace nada*/
+	vertical-align: middle;
+	color: lightseagreen;
+	padding: 0.5vw;
+}
+
+/* ----------------------------- SLIDER --------------------------------- */
+
+@keyframes slide {
+
+	/* por lo q entiendo, al moverse un -100% se moveria la primer img hasta la 2da. por lo tanto debo tener 100% x (n-1) imgs... en este caso son 3 img, seria -200% de traslado al llegar al 100% de la animacion (0% la 1ra, -100% la 2da y -200% la 3ra img). ademas le agrego al final la 1ra imagen de nuevo para que no se corte la animacion, por lo que me queda en el 100% un traslado en X de -300% */
+	0% {
+		transform: translateX(0);
+	}
+
+	15% {
+		transform: translateX(0);
+	}
+
+	30% {
+		transform: translateX(-100%);
+	}
+
+	40% {
+		transform: translateX(-100%);
+	}
+
+	60% {
+		transform: translateX(-200%);
+	}
+
+	70% {
+		transform: translateX(-200%);
+	}
+
+	90% {
+		transform: translateX(-300%);
+	}
+
+	100% {
+		transform: translateX(-300%);
+	}
+}
+.contenedor {
+	display: grid;
+	grid-column: 2/6;
+	grid-row: 3/4;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.slider {
+	width: 100%;
+	position: relative;
+}
+
+.slides {
+	width: 100%;
+	position: relative;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: inline-flex;
+	overflow: hidden;
+}
+
+.slide {
+	text-align: center;
+	flex-shrink: 0;
+	list-style: none;
+	overflow: hidden;
+	animation: slide 15s ease-in-out 2s infinite normal none;
+}
+
+.slide img {
+	width: 100%;
+}
+
+.slider-controler {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	padding: 0.5rem;
+	background-color: #9fd5d1;
+	z-index: 50;
+}
+
+.slider-controler li {
+	margin: 0 0.5rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+/*----------------------------------------------------------------*/
+
+.q-somos {
+	display: grid;
+	grid-column: 1/7;
+	grid-row: 4/5;
+	padding: 1rem 0 0 0;
+	text-align: justify;
+	margin: 2rem;
+}
+.q-somos h3,.divisiones h3,.servicio1 h3,.servicio2 h3,.servicio3 h3,.servicio4 h3,.servicio5 h3 {
+	width: 100%;
+	padding: 1rem 3rem;
+	border-radius: .5rem;
+	background-color: lightseagreen;
+	color: white;
+}
+.parrafo1{
+	display: grid;
+	grid-column: 1/7;
+	grid-row: 5/6;
+}
+.textos {
+	padding: 2rem 7rem;
+	text-align: justify;
+	text-justify: auto;
+	text-indent: 1rem;
+	letter-spacing: 0.1rem;
+}
+.divisiones {
+	display: grid;
+	grid-column: 1/7;
+	grid-row: 6/7;
+	padding: 1rem 0 0 0;
+	text-align: justify;
+	margin: 2rem;
+}
+.personal{
+	display: grid;
+	grid-column: 1/7;
+	grid-row: 7/8
+}
+
+/*----------- servicios ------------------*/
+.main{
+	grid-column: 1/7;
+	grid-row: 3/8;
+	
+}
+.servicio1, .servicio2, .servicio3, .servicio4, .servicio5{
+	grid-column: 1/7;
+	grid-row: 3/4;
+	text-align: justify;
+	text-justify: distribute;
+}
+.servicio2{
+	grid-row: 4/5;
+}
+.servicio3{
+	grid-row: 5/6;
+}
+.servicio4{
+	grid-row: 6/7;
+}
+.servicio5{
+	grid-row: 7/8;
+}
+.texto-izq{
+	grid-column: 2/4;
+	width: 40%;
+	margin: 2rem;
+}
+.texto-der{
+	grid-column: 5/6;
+	width: 40%;
+	margin: 2rem;
+}
+.galeria-der {
+	grid-column: 5/6;
+	border-radius: 0.5rem;
+	width: 15vw;
+	margin: 2vw;
+}
+.galeria-izq {
+	grid-column: 2/4;
+	border-radius: 0.5rem;
+	width: 15vw;
+	margin: 2vw;
+}
+/*---------------------------------*/
+/*Tabla de personal */
+.tabla {
+	text-align: center;	
+	grid-column: 2/4;
+	grid-row: 7/8;
+	margin-bottom: 2vw;
+}
+table{
+	border-spacing: 1rem;
+}
+th{
+	background-color: lightseagreen;
+	border-radius: 0.3vw;
+	color: white;
+	font-weight: bold;
+	padding: 0.3vw;
+}
+td{
+	background-color: lightseagreen;
+	border-radius: 0.3vw;
+	color: white;
+	padding: 0.3vw;
+}
+/*------------------------------------------*/
+
+.galeria {
+	grid-column: 4/6;
+	grid-row: 7/8;
+	padding: 2rem;
+}
+.galeria > img{
+	border-radius: 0.5rem;
+}
+
+/*--------- footer -------------*/
+.footer{
+	grid-column: 1/7;
+	grid-row: 8/9;
+	height: 3.5rem;
+	background-color: #9fd5d1;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 0.5rem;
+	
+}
+.footer a{
+	color: white;
+	font-weight: bold;
+}
+.footer a:hover {
+	color: black;
+	font-weight: bold;
+}
+.footer a:active {
+	color: steelblue;
+}

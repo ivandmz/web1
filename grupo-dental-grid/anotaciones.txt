@@ -1,0 +1,31 @@
+links de otras paginas web
+
+https://enjoydental.com.ar/  especialidades, nav y form contact
+
+http://www.dentalcenter.com.ar/
+
+https://magnasalud.cl/
+
+https://clinicadentalteran.com/      fijarme en seccion tratamientos>ortodoncia el slice
+
+http://maycenter.com.ar/		menu y banner
+
+
+
+FAVICON.ICO
+Si se incluye un archivo favicon.ico en la carpeta raíz del sitio web, los navegadores utilizan automáticamente esa imagen
+como favicon de todas las páginas del sitio, sin que sea necesario incluir la etiqueta <link>. La etiqueta <link> es 
+necesaria si se quieren utilizar otros formatos de imagen, guardarlo en otras carpetas o hacer que diferentes páginas 
+hagan referencia a favicons diferentes (dando diferentes valores al atributo href).
+
+<link rel="icon" type="image/png" href="imagen.png" sizes="64x64">
+
+<link rel="icon" type="image/svg+xml" href="imagen.svg" sizes="any">
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="imagen.ico" sizes="16x16 24x24 36x36 48x48">
+
+<link rel="icon" type="image/png" href="imagen_16.png" sizes="16x16">
+
+<link rel="icon" type="image/png" href="imagen_32.png" sizes="32x32">
+
+<link rel="icon" type="image/png" href="imagen_64.png" sizes="64x64">
